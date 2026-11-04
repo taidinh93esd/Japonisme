@@ -833,12 +833,12 @@ section.t-media:has(img[src*="img/v1-"]) .frame,section.t-media:has(img[src*="im
 .jh-a img{object-position:30% 50%}
 .jh-b{grid-column:4/8;grid-row:5/11;z-index:1;box-shadow:0 0 0 6px #050505}
 .jh-b img{object-position:50% 35%;filter:brightness(.82)}
-.jh-c{grid-column:11/13;grid-row:1/5}
+.jh-c{grid-column:10/13;grid-row:1/5}
 .jh-c img{object-position:50% 30%}
 .jh-nav{grid-column:7/10;grid-row:1/2;align-self:center;display:flex;gap:18px;font:400 12.5px var(--body);z-index:2}
 .jh-nav a{color:var(--ink);text-decoration:none}
 .jh-nav a:hover{color:var(--accent)}
-.jh-lead{grid-column:6/11;grid-row:2/5;align-self:center;margin:0 clamp(12px,2vw,26px);font:400 clamp(14.5px,1.6cqw,21px)/1.3 var(--body);text-wrap:pretty;letter-spacing:-.025em;color:var(--ink);z-index:2}
+.jh-lead{grid-column:6/10;grid-row:2/5;align-self:end;margin:0 clamp(12px,2vw,26px);font:400 clamp(19px,1.8vw,26px)/1.18 var(--body);letter-spacing:-.025em;color:var(--ink);z-index:2}
 .jh-small{grid-column:1/4;grid-row:8/11;align-self:end;margin:0 0 clamp(22px,3vw,40px) clamp(18px,3vw,44px);font:400 12.5px/1.45 var(--body);color:var(--text);z-index:2;max-width:34ch}
 .jh-ttl{grid-column:8/13;grid-row:5/11;align-self:end;padding:0 clamp(18px,3vw,44px) clamp(22px,3vw,40px) clamp(10px,1.5vw,20px);z-index:2}
 .jh-ttl small{display:block;font:400 11px var(--mono);color:var(--muted);margin-bottom:8px}
@@ -892,6 +892,88 @@ section.t-media:has(img[src*="img/v1-"]) .frame,section.t-media:has(img[src*="im
   @keyframes jhUp{from{opacity:0;translate:0 30px}to{opacity:1;translate:0 0}}
 }
 .tld{margin:6px 0 0;display:grid;gap:0;border-top:1px solid var(--line)}.tld>div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;padding:9px 0;border-bottom:1px solid var(--line)}.tld dt{font:500 10.5px/1.7 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}.tld dd{margin:0;font-size:15px;line-height:1.6}@media(max-width:560px){.tld>div{grid-template-columns:1fr;gap:2px}}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&text=%E6%B5%AE%E4%B8%96%E7%B5%B5%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%9D%E3%83%8B%E3%82%B9%E3%83%A0%20&display=swap">
+<style>
+/* ===== Overview cover v3: "pinning prints onto Tanguy's wall" (adapted from the Oda Nobunaga hero prompt) ===== */
+.jw{--prussian:#1B3A8C;--cream:#F4EFE6;--ink2:#0D0C0B;--org:#E2572B;container-type:inline-size;position:relative;margin:-54px calc(-1 * clamp(20px,4.2vw,64px)) 0}
+.jw *{box-sizing:border-box}
+.jw-hero,.jw-bio{--u:calc(100cqw / 1507);--side:calc(var(--u) * 121);position:relative;overflow:hidden}
+.jw-grain::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:20;opacity:.16;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+/* ---------- hero ---------- */
+.jw-hero{height:calc(var(--u) * 1440);background:var(--prussian);color:var(--cream)}
+.jw-nav{position:absolute;z-index:12;left:0;right:0;top:0;height:calc(var(--u) * 84);display:flex;justify-content:center;align-items:center;gap:calc(var(--u) * 70);border-bottom:1px solid rgba(244,239,230,.5)}
+.jw-nav a{font:900 calc(var(--u) * 27)/1 var(--body);letter-spacing:-.01em;text-transform:uppercase;color:var(--cream);text-decoration:none}
+.jw-nav a:hover{color:var(--org)}
+.jw-rule{position:absolute;z-index:11;top:calc(var(--u) * 84);bottom:0;width:1px;background:rgba(244,239,230,.5)}
+.jw-rule.l{left:var(--side)}.jw-rule.r{right:var(--side)}
+.jw-lab{position:absolute;z-index:12;width:0;height:0;display:flex;align-items:center;justify-content:center}
+.jw-lab span{display:block;white-space:nowrap;font:500 max(9px,calc(var(--u) * 11))/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.jw-lab.l{left:calc(var(--side) / 2)}.jw-lab.l span{transform:rotate(-90deg)}
+.jw-lab.r{right:calc(var(--side) / 2)}.jw-lab.r span{transform:rotate(90deg)}
+.jw-kanji{position:absolute;z-index:3;left:0;right:0;top:calc(var(--u) * 150);text-align:center;font:400 calc(var(--u) * 44)/1 "Mochiy Pop One","Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif;letter-spacing:.06em;color:var(--cream)}
+.jw-t{position:absolute;z-index:2;left:50%;transform:translateX(-50%);overflow:hidden}
+.jw-t svg{display:block;width:100%;height:100%;overflow:visible}
+.jw-t text{fill:var(--cream);font-family:Anton,"Oswald",Impact,sans-serif}
+.jw-t1{top:calc(var(--u) * 252);width:calc(var(--u) * 392);height:calc(var(--u) * 258)}
+.jw-t2{top:calc(var(--u) * 526);width:calc(var(--u) * 1120);height:calc(var(--u) * 266)}
+.jw-t2 text{fill:var(--org)}
+.jw-stage{position:absolute;z-index:4;left:50%;bottom:0;width:calc(var(--u) * 820);aspect-ratio:1600/2101;transform:translateX(-50%)}
+.jw-cam{position:absolute;inset:0;transform-origin:50% 22%;will-change:transform}
+.jw-cam img{position:absolute;display:block;max-width:none;user-select:none;-webkit-user-drag:none}
+.jw-fig{inset:0;width:100%;height:100%;z-index:5;filter:saturate(var(--sat,1));transition:filter .1s linear}
+.jw-pc{z-index:2;opacity:0;will-change:transform,opacity;box-shadow:0 calc(var(--u) * 10) calc(var(--u) * 30) rgba(0,0,0,.25)}
+.jw-pc.on{box-shadow:none}
+.jw-pin{position:absolute;z-index:6;width:calc(var(--u) * 9);height:calc(var(--u) * 9);margin:calc(var(--u) * -4.5) 0 0 calc(var(--u) * -4.5);border-radius:50%;background:var(--org);box-shadow:0 1px 3px rgba(0,0,0,.45);transform:scale(0);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.jw-pin.on{transform:scale(1)}
+.jw-cap{position:absolute;z-index:13;right:calc(var(--side) + var(--u) * 18);bottom:calc(var(--u) * 26);max-width:calc(var(--u) * 360);font:400 max(10px,calc(var(--u) * 12))/1.45 var(--mono);color:var(--cream);opacity:0;transition:opacity .5s;text-align:right}
+.jw-cap.on{opacity:.9}
+.jw-hint{position:absolute;z-index:13;left:calc(var(--side) + var(--u) * 18);bottom:calc(var(--u) * 26);font:400 max(10px,calc(var(--u) * 12))/1.45 var(--mono);color:var(--cream);opacity:.8;transition:opacity .4s}
+.jw-petals{position:absolute;z-index:14;inset:0;width:100%;height:100%;pointer-events:none}
+/* ---------- bio ---------- */
+.jw-bio{background:var(--cream);color:var(--ink2);padding-bottom:calc(var(--u) * 120)}
+.jw-bio .jw-rule{top:0;background:rgba(226,87,43,.55)}
+.jw-bio .jw-lab span{color:var(--org)}
+.jw-row{position:relative;min-height:calc(var(--u) * 324);border-bottom:1px solid rgba(226,87,43,.75);display:grid;grid-template-columns:calc(var(--u) * 290) 1fr;gap:calc(var(--u) * 70);padding:calc(var(--u) * 48) calc(var(--u) * 150) calc(var(--u) * 48) calc(var(--u) * 200);align-items:start}
+.jw-crest small,.jw-stat small{display:block;font:500 max(9px,calc(var(--u) * 10.5))/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:#6b645b}
+.jw-crest small{color:var(--org)}
+.jw-crest img{display:block;margin-top:calc(var(--u) * 16);width:calc(var(--u) * 232);height:calc(var(--u) * 232);border-radius:50%;object-fit:cover;object-position:28% 40%;border:1px solid rgba(226,87,43,.7);padding:calc(var(--u) * 8);background:var(--cream)}
+.jw-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u) * 44) calc(var(--u) * 40);padding-top:calc(var(--u) * 18)}
+.jw-stat b{display:block;margin-top:calc(var(--u) * 8);font:400 max(15px,calc(var(--u) * 31))/1.2 Anton,"Oswald",Impact,sans-serif;text-transform:uppercase;letter-spacing:.005em;color:var(--ink2)}
+.jw-card{position:relative;margin:calc(var(--u) * 110) calc(var(--u) * 134) 0;border:1px solid rgba(226,87,43,.7);padding:calc(var(--u) * 70) calc(var(--u) * 60) calc(var(--u) * 80);text-align:center}
+.jw-card i.c{position:absolute;width:calc(var(--u) * 30);height:calc(var(--u) * 30);border-radius:50%;border:1px solid rgba(226,87,43,.7);background:var(--cream);transform:translate(-50%,-50%)}
+.jw-card i.c1{left:0;top:0}.jw-card i.c2{left:100%;top:0}.jw-card i.c3{left:0;top:100%}.jw-card i.c4{left:100%;top:100%}
+.jw-card svg.ic{display:block;margin:0 auto calc(var(--u) * 40);width:calc(var(--u) * 118);height:calc(var(--u) * 118)}
+.jw-say{margin:0;font:900 calc(var(--u) * 46)/1.14 var(--body);letter-spacing:-.025em;text-transform:uppercase;color:var(--ink2)}
+.jw-say span{display:block}
+.jw-say em{font-style:normal;color:var(--org)}
+.jw-card p.jw-q{margin:calc(var(--u) * 44) auto 0;max-width:500px;font:400 max(15px,calc(var(--u) * 19))/1.55 var(--body);color:#3a352f}
+.jw-go{display:inline-block;margin-top:calc(var(--u) * 40);padding:12px 22px;border:1px solid var(--org);border-radius:3px;font:500 12px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--ink2);text-decoration:none}
+.jw-go:hover{background:var(--org);color:#fff}
+.jw+.jidx{margin-top:0}
+@media (max-width:767px){
+  .jw{margin:-26px -16px 0}
+  .jw-hero,.jw-bio{--u:calc(100cqw / 1300);--side:22px}
+  .jw-hero{height:max(100svh,178cqw)}
+  .jw-nav{height:56px;gap:22px}
+  .jw-nav a{font-size:13px}
+  .jw-rule{top:56px}
+  .jw-lab{display:none}
+  .jw-kanji{top:76px;font-size:17px}
+  .jw-t1{top:112px;width:calc(var(--u) * 400);height:calc(var(--u) * 262)}
+  .jw-t2{top:calc(112px + var(--u) * 290);width:calc(var(--u) * 1180);height:calc(var(--u) * 280)}
+  .jw-stage{width:96cqw}
+  .jw-cap{right:26px;left:26px;max-width:none;font-size:10px}
+  .jw-hint{display:none}
+  .jw-bio .jw-rule{display:none}
+  .jw-row{grid-template-columns:1fr;padding:32px 22px;gap:26px}
+  .jw-crest img{width:120px;height:120px}
+  .jw-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 18px}
+  .jw-stat b{font-size:17px}
+  .jw-card{margin:48px 22px 0;padding:44px 20px 48px}
+  .jw-card svg.ic{width:64px;height:64px;margin-bottom:22px}
+  .jw-say{font-size:min(4.6vw,22px);line-height:1.2}
+}
 </style>
 <div class="topbar"><button class="btn" id="menuBtn" type="button" aria-controls="side" aria-expanded="false"><span class="burger" aria-hidden="true"></span>Mục lục</button><div class="t" id="topTitle">Japonism: Tiền đề của nghệ thuật hiện đại phương Tây</div></div>
 <div class="app">
@@ -1524,16 +1606,157 @@ route();
 </script>
 <script>
 (function(){
+  var P=[ // id, left, top, width, height (% of painting), window a-b, dx, dy (% of stage), rotate, ease
+    ['tg-fuji',29.313,0,39.25,40.267,.12,.38,-40,-30,-9,'out'],
+    ['tg-cherry',68.562,0,31.438,40.267,.18,.44,40,-30,8,'back1.25'],
+    ['tg-geisha-l',0,16.326,29.313,40.79,.26,.52,-45,0,-6,'out'],
+    ['tg-geisha-r',79.312,40.267,20.688,59.733,.32,.58,45,0,7,'back1.3'],
+    ['tg-snow',0,0,29.313,16.326,.40,.66,-35,-35,-5,'out'],
+    ['tg-flowers',0,57.116,29.313,42.884,.46,.72,-35,35,6,'back1.4'],
+    ['tg-center',29.313,40.267,50,59.733,.50,.76,0,8,0,'out']
+  ];
+  var ORDER=['tg-center','tg-flowers','tg-snow','tg-geisha-l','tg-geisha-r','tg-fuji','tg-cherry'];
+  function lab(side,y,t){return '<div class="jw-lab '+side+'" style="top:calc(var(--u) * '+y+')"><span>'+t+'</span></div>';}
+  function labs(a,ys){var h='';ys.forEach(function(y,i){h+=lab('l',y,a[i]);});var b=[a[0],a[2],a[1],a[3]];ys.forEach(function(y,i){h+=lab('r',y,b[i]);});return h;}
+  var pcs='';ORDER.forEach(function(id){var c=P.filter(function(x){return x[0]===id;})[0];
+    pcs+='<img class="jw-pc" data-id="'+id+'" src="img/'+id+'.webp" alt="" style="left:'+c[1]+'%;top:'+c[2]+'%;width:'+c[3]+'%;height:'+c[4]+'%">';
+    if(id!=='tg-center') pcs+='<i class="jw-pin" data-pin="'+id+'" style="left:'+(c[1]+c[3]/2)+'%;top:'+(c[2]+1.2)+'%"></i>';});
+  window.__JW_HTML=
+  '<div class="jw" aria-label="Bìa: Japonism">'+
+   '<section class="jw-hero jw-grain">'+
+    '<nav class="jw-nav"><a href="#history">Bối cảnh</a><a href="#impression">Nghệ sĩ</a><a href="#compare">Đối chiếu</a></nav>'+
+    '<i class="jw-rule l"></i><i class="jw-rule r"></i>'+
+    labs(['01 / 05','Japonism','Tiền đề của nghệ thuật hiện đại','01 / 05'],[225,560,1010,1330])+
+    '<div class="jw-kanji" lang="ja">浮世絵 ・ ジャポニスム</div>'+
+    '<div class="jw-t jw-t1"><svg viewBox="0 0 392 258" aria-hidden="true"><text x="0" y="258" textLength="392" lengthAdjust="spacingAndGlyphs">1854</text></svg></div>'+
+    '<div class="jw-t jw-t2"><svg viewBox="0 0 1120 266" aria-hidden="true"><text x="0" y="266" textLength="1120" lengthAdjust="spacingAndGlyphs">JAPONISM</text></svg></div>'+
+    '<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">1854 Japonism</h2>'+
+    '<div class="jw-stage"><div class="jw-cam">'+pcs+'<img class="jw-fig" src="img/tg-figure.webp" alt="Van Gogh, Chân dung Père Tanguy, 1887"></div></div>'+
+    '<canvas class="jw-petals" aria-hidden="true"></canvas>'+
+    '<div class="jw-hint">Cuộn xuống: tranh khắc Nhật được ghim dần lên tường ↓</div>'+
+    '<div class="jw-cap">Van Gogh, Chân dung Père Tanguy, 1887 · Musée Rodin. Sáu tờ tranh khắc Nhật sau lưng ông là bộ sưu tập của chính Van Gogh.</div>'+
+   '</section>'+
+   '<section class="jw-bio jw-grain">'+
+    '<i class="jw-rule l"></i><i class="jw-rule r"></i>'+
+    lab('l',162,'Hồ sơ')+lab('r',162,'02 / 05')+
+    '<div class="jw-row">'+
+     '<div class="jw-crest"><small>[ Biểu tượng: Sóng lớn, Hokusai ]</small><img src="img/hokusai-wave.jpg" alt="Hokusai, Sóng lớn ngoài khơi Kanagawa" loading="lazy"></div>'+
+     '<div class="jw-stats">'+
+      '<div class="jw-stat"><small>Thời kỳ</small><b>1854 — 1910</b></div>'+
+      '<div class="jw-stat"><small>Trung tâm</small><b>Paris · London · Vienna</b></div>'+
+      '<div class="jw-stat"><small>Nguồn</small><b>Ukiyo-e · Katagami</b></div>'+
+      '<div class="jw-stat"><small>Người môi giới</small><b>Bing · Hayashi</b></div>'+
+      '<div class="jw-stat"><small>Nghệ sĩ</small><b>Monet · Van Gogh · Degas</b></div>'+
+      '<div class="jw-stat"><small>Di sản</small><b>Ngữ pháp hiện đại</b></div>'+
+     '</div>'+
+    '</div>'+
+    lab('l',760,'03 / 05')+lab('r',760,'Tuyên ngôn')+
+    '<div class="jw-card"><i class="c c1"></i><i class="c c2"></i><i class="c c3"></i><i class="c c4"></i>'+
+     '<svg class="ic" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#E2572B" stroke-width="3" stroke-linecap="round"><path d="M14 104 C40 86 58 70 70 48 C78 34 92 22 108 16"/><path d="M52 74 C46 62 46 52 50 42"/><path d="M78 40 C88 42 98 48 104 58"/></g><g fill="#E2572B">'+
+      [[50,40],[104,58],[70,48],[30,92],[92,24]].map(function(p){var s='';for(var k=0;k<5;k++){var a=k*72*Math.PI/180;s+='<circle cx="'+(p[0]+Math.cos(a)*5.5).toFixed(1)+'" cy="'+(p[1]+Math.sin(a)*5.5).toFixed(1)+'" r="4.2"/>';}return s+'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="2.2" fill="#F4EFE6"/>';}).join('')+
+     '</g></svg>'+
+     '<p class="jw-say"><span>Japonism là lúc châu Âu</span><span>học lại cách nhìn từ những</span><span>tờ tranh khắc rẻ tiền mà</span><span>người Nhật đang bỏ đi, rồi</span><span><em>biến chúng thành hiện đại</em></span></p>'+
+     '<p class="jw-q">Samuel Bing viết trên Le Japon artistique: nghệ thuật Nhật hoà vào nghệ thuật của ta như một giọt máu hoà vào dòng máu, không còn lọc ra được nữa.</p>'+
+     '<a class="jw-go" href="#history">Bắt đầu đọc →</a>'+
+    '</div>'+
+   '</section>'+
+  '</div>';
+
+  var E={out:function(t){return 1-Math.pow(1-t,3);},io:function(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;}};
+  function back(s){return function(t){t=t-1;return t*t*((s+1)*t+s)+1;};}
+  function clamp(x){return x<0?0:x>1?1:x;}
+  var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function fitTitles(root){
+    var go=function(){
+      var c=document.createElement('canvas').getContext('2d');c.font='400 100px Anton';
+      var m=c.measureText('H');var r=(m.actualBoundingBoxAscent||73)/100;
+      root.querySelectorAll('.jw-t text').forEach(function(t){var h=+t.getAttribute('y');t.setAttribute('font-size',(h/r).toFixed(2));});
+    };
+    if(document.fonts&&document.fonts.load){document.fonts.load('400 100px Anton').then(go,go);}else go();
+  }
+
+  function reveal(root){
+    if(RM||!root.animate) return;
+    var ez='cubic-bezier(.2,.8,.2,1)';
+    root.querySelectorAll('.jw-t svg').forEach(function(s,i){s.animate([{transform:'translateY(102%)'},{transform:'translateY(0)'}],{duration:1100,delay:150+i*140,easing:ez,fill:'both'});});
+    var k=root.querySelector('.jw-kanji');k.animate([{opacity:0,transform:'translateY(14px)'},{opacity:1,transform:'none'}],{duration:900,delay:60,easing:ez,fill:'both'});
+    root.querySelectorAll('.jw-hero .jw-nav a, .jw-hero .jw-lab span').forEach(function(el,i){el.animate([{opacity:0},{opacity:1}],{duration:700,delay:120+i*25,easing:ez,fill:'both'});});
+    root.querySelector('.jw-stage').animate([{transform:'translate(-50%,6%)',opacity:.0},{transform:'translate(-50%,0)',opacity:1}],{duration:1300,easing:ez,fill:'both'});
+  }
+
+  function petals(cv,hero){
+    var ctx=cv.getContext('2d'),W=0,H=0,dpr=Math.min(2,window.devicePixelRatio||1),N=[],run=true;
+    function size(){var r=hero.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
+    function mk(y){var s=(6+Math.random()*9)*(W/1507*1.6+.4);return{x:Math.random()*W,y:y==null?Math.random()*H:-20,s:s,vy:.35+Math.random()*.7,ph:Math.random()*6.28,sw:.6+Math.random()*1.4,r:Math.random()*6.28,vr:(Math.random()-.5)*.03,pink:Math.random()<.45};}
+    size();for(var i=0;i<42;i++)N.push(mk());
+    window.addEventListener('resize',size);
+    function draw(t){
+      if(!cv.isConnected){run=false;return;}
+      var vis=hero.getBoundingClientRect();
+      if(vis.bottom>0&&vis.top<innerHeight){
+        ctx.clearRect(0,0,W,H);
+        N.forEach(function(p,i){
+          if(!RM){p.y+=p.vy;p.x+=Math.sin(t/1400+p.ph)*p.sw*.5;p.r+=p.vr;}
+          if(p.y>H+20)N[i]=mk(-1);
+          ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r+Math.sin(t/900+p.ph)*.4);
+          ctx.globalAlpha=p.y>H*.85?Math.max(0,(H-p.y)/(H*.15)):.92;
+          var g=ctx.createRadialGradient(0,p.s*.15,0,0,0,p.s);
+          g.addColorStop(0,p.pink?'#F2B8C0':'#FFF6F2');g.addColorStop(1,p.pink?'#E9A3AE':'#F4DCD6');
+          ctx.fillStyle=g;ctx.beginPath();
+          ctx.moveTo(0,-p.s);ctx.bezierCurveTo(p.s*.75,-p.s*.6,p.s*.6,p.s*.55,0,p.s*.8);ctx.bezierCurveTo(-p.s*.6,p.s*.55,-p.s*.75,-p.s*.6,0,-p.s);
+          ctx.fill();ctx.restore();
+        });
+      }
+      if(run&&!RM)requestAnimationFrame(draw);
+    }
+    requestAnimationFrame(draw);
+  }
+
+  function scrollBeat(root){
+    var hero=root.querySelector('.jw-hero'),cam=root.querySelector('.jw-cam'),fig=root.querySelector('.jw-fig'),cap=root.querySelector('.jw-cap'),hint=root.querySelector('.jw-hint');
+    var stage=root.querySelector('.jw-stage');
+    var els={};root.querySelectorAll('.jw-pc').forEach(function(e){els[e.dataset.id]=e;});
+    var pins={};root.querySelectorAll('.jw-pin').forEach(function(e){pins[e.dataset.pin]=e;});
+    var cur=RM?1:0,run=true;
+    function target(){var vh=innerHeight,top=hero.getBoundingClientRect().top;return RM?1:clamp((-top-.06*vh)/(.62*vh));}
+    function apply(p){
+      var e=E.io(p);
+      cam.style.transform='scale('+(1+.28*e)+')';
+      fig.style.setProperty('--sat',(.3+.7*clamp(p/.8)).toFixed(3));
+      var sw=stage.offsetWidth,sh=stage.offsetHeight;
+      P.forEach(function(c){
+        var el=els[c[0]],a=c[5],b=c[6],t=(p-a)/(b-a);
+        if(t<=0){el.style.opacity=0;el.classList.remove('on');if(pins[c[0]])pins[c[0]].classList.remove('on');return;}
+        t=clamp(t);var o=clamp(t/.07);
+        var f=c[10]==='out'?E.out:back(parseFloat(c[10].slice(4)));var k=1-f(t);
+        el.style.opacity=o;
+        el.style.transform='translate('+(c[7]*sw/100*k).toFixed(1)+'px,'+(c[8]*sh/100*k).toFixed(1)+'px) rotate('+(c[9]*k).toFixed(2)+'deg)';
+        el.classList.toggle('on',t>=1);
+        if(pins[c[0]])pins[c[0]].classList.toggle('on',t>=1);
+      });
+      cap.classList.toggle('on',p>.78);
+      hint.style.opacity=p>.05?0:.8;
+    }
+    function loop(){
+      if(!hero.isConnected){run=false;return;}
+      var p=target();cur+= (p-cur)*.2; if(Math.abs(p-cur)<.0005)cur=p;
+      apply(cur);
+      if(run)requestAnimationFrame(loop);
+    }
+    apply(cur);requestAnimationFrame(loop);
+  }
+
+  window.__jwInit=function(){
+    var root=document.querySelector('.jw');if(!root||root.dataset.init)return;root.dataset.init=1;
+    fitTitles(root);reveal(root);scrollBeat(root);petals(root.querySelector('.jw-petals'),root.querySelector('.jw-hero'));
+  };
+})();
+</script>
+<script>
+(function(){
   var view=document.getElementById('view'); if(!view) return;
-  var H='<section class="jhero" aria-label="Bìa: Japonism">'+
-   '<figure class="jh-a"><img src="img/hokusai-wave.jpg" alt="Hokusai, Sóng lớn ngoài khơi Kanagawa"></figure>'+
-   '<figure class="jh-b"><img src="img/vg-tanguy.jpg" alt="Van Gogh, Chân dung Père Tanguy"></figure>'+
-   '<figure class="jh-c"><img src="img/hiro-ohashi.jpg" alt="Hiroshige, Mưa rào trên cầu Ōhashi"></figure>'+
-   '<nav class="jh-nav"><a href="#history">bối cảnh</a><a href="#principles">thủ pháp</a><a href="#impression">nghệ sĩ</a></nav>'+
-   '<p class="jh-lead">Từ những tờ tranh in bọc gốm sứ đến nguồn cảm hứng bất tận cho Monet, Van Gogh hay Degas — cuộc hội ngộ định mệnh mang tên Japonism đã lật ngược hoàn toàn cách phương Tây nhìn ngắm thế giới, tái định nghĩa cả một kỷ nguyên nghệ thuật hiện đại.</p>'+
-   '<p class="jh-small">Từ Hokusai, Hiroshige đến Monet, Van Gogh, Degas, Lautrec, Klimt: cắt khung, mảng phẳng, khoảng trống, góc nhìn di động trở thành ngữ pháp của nghệ thuật hiện đại.</p>'+
-   '<div class="jh-ttl"><small>1854 — 1910 · By Tai Dinh</small><h2 class="jh-h"><b>Japo</b><span>nism</span></h2><a href="#history">bắt đầu đọc →</a></div>'+
-  '</section>'+
+  var H=window.__JW_HTML+
   '<nav class="jidx" aria-label="Bốn phần chính">'+
    '<div class="jidx-h"><b>Index</b><p>Bốn phần, đọc theo thứ tự hoặc nhảy thẳng vào phần bạn cần.</p></div>'+
    '<a href="#history"><span class="jx-l">Bối cảnh · 1854</span><span class="jx-p"><img src="img/monet-japonaise.jpg" alt="" loading="lazy"><i>1</i></span><span class="jx-t">Làn sóng Nhật và khủng hoảng hệ hình</span><span class="jx-d">Mở cửa, nhà buôn, triển lãm, và vì sao châu Âu sẵn sàng học.</span></a>'+
@@ -1549,7 +1772,8 @@ route();
     h.textContent=''; h.append(a+' '); var e=document.createElement('em'); e.textContent=b; h.append(e);
   }
   function deco(){
-    if(view.querySelector('section[id^="overview-b"]') && !view.querySelector('.jhero')) view.insertAdjacentHTML('afterbegin',H);
+    if(view.querySelector('section[id^="overview-b"]') && !view.querySelector('.jw')) view.insertAdjacentHTML('afterbegin',H);
+    if(window.__jwInit) window.__jwInit();
     splitH1();
   }
   new MutationObserver(deco).observe(view,{childList:true});
